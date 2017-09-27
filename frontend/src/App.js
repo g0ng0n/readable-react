@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import Modal from 'react-modal'
+import Loading from 'react-loading'
+
+import Header from './components/Header';
 import './App.css';
+
+// styles in-component - pay attention to the syntax
+const styles = {
+    textAlign: 'center',
+    margin: 0,
+    padding: 0,
+    fontFamily: 'sans-serif',
+};
 
 class App extends Component {
 
@@ -25,17 +37,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div style={styles}>
+            <Header name={"Readable"}/>
+
+        </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        posts: state.posts
+    }
+};
+
+function mapDispatchToProps (dispatch) {
+    return {
+
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);
