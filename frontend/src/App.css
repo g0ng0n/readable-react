@@ -1,28 +1,67 @@
-.App {
-  text-align: center;
+/* =====================================
+   Page Styles
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.4em;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.container > * {
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(110,133,156,0.12);
+  padding: 0.85em;
+  border: solid 1px rgba(110,133,156,0.15);
+}
+header {
+  background-color: #fbaea8;
+}
+nav {
+  background-color: #fbaea8;
+}
+main {
+  background-color: #aad2ed;
+}
+aside {
+  background-color: #6ad78a;
+}
+footer {
+  background-color: #6e859c;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* =====================================
+   Grid Layout
+======================================== */
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100px minmax(200px, 1fr)  100px;
+  grid-gap: 10px;
+  grid-template-areas:
+          "header header"
+          "main categories"
+          "footer footer";
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+header {
+  grid-area: header
 }
 
-.App-title {
-  font-size: 1.5em;
+main {
+  grid-area: main;
 }
 
-.App-intro {
-  font-size: large;
+categories{
+  grid-area: categories;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+footer {
+  grid-area: footer;
 }

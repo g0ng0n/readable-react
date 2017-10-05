@@ -37,9 +37,11 @@ class App extends Component {
 
   render() {
     return (
-        <div style={styles}>
+        <div className="container">
             <Header name={"Readable"}/>
-
+            <main>Main</main>
+            <aside>categories</aside>
+            <footer>Footer</footer>
         </div>
     );
   }
