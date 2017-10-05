@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Modal from 'react-modal'
 import Loading from 'react-loading'
 
-import Header from './components/Header';
+import Header from './components/presentational/Header';
 import './App.css';
 
 // styles in-component - pay attention to the syntax
@@ -39,9 +39,9 @@ class App extends Component {
     return (
         <div className="container">
             <Header name={"Readable"}/>
-            <main>Main</main>
-            <aside>categories</aside>
-            <footer>Footer</footer>
+            <Main />
+            <Categories />
+            <Footer />
         </div>
     );
   }
