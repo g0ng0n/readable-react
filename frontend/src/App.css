@@ -72,11 +72,12 @@ footer {
 @media (min-width: 768px) {
   .container{
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 100px minmax(150px, auto) 100px;
+    grid-template-rows: 60px minmax(150px, auto) 100px;
     grid-template-areas:
             "header header"
             "main categories"
             "footer footer";
     }
+
 
 }
