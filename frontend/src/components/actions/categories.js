@@ -10,22 +10,23 @@ export function addCategory ({ category }) {
     }
 }
 
-export function removeCategory ({ categoryId }){
+export function removeCategory ({ categoryName }){
     return {
         type: REMOVE_CATEGORY,
-        category
+        categoryName
     }
 }
 
-export function getCategory ({ categoryId }){
+export function getCategory ({ categoryName }){
     return {
         type: GET_CATEGORY,
-        categoryId
+        categoryName
     }
 }
 
-export function getCategories ({ }){
+export function getCategories ({categories }){
     return {
-        type: GET_CATEGORIES
+        type: GET_CATEGORIES,
+        categories
     }
 }
