@@ -1,42 +1,34 @@
 
 const initialState = {
-    posts : [
-        {
-            id: '213',
-            title: 'sarasa',
-            body: 'sasas',
-        },
-        {
-            id: '123123',
-            title: 'asdasd',
-            body: 'asdasd',
-        },
-        {
-            id: '1sss23123',
-            title: 'asdasd',
-            body: 'asdasd',
-        }
+    categories: [
+
     ],
     name: 'Manny'
-}
+};
 
 export default (state = initialState, action) => {
 
     switch (action.type){
-        case 'ADD_NOTE':
+        case 'ADD_CATEGORY':
             return {
                 ...state,
-                notes: [...state.notes, action.body],
-            }
+                categories: [...state.categories, action.category],
+            };
         case 'REMOVE_NOTE':
             return {
                 ...state,
-                notes: state.notes.filter(note => note !== action.body),
-            }
-        case 'GET_NOTES':
-            return {
-                ...state
-            }
+                categories: state.categories.filter(category => category !== action.categoryName),
+            };
+        case 'GET_CATEGORY':
+            return Object.assign({}, state, {
+                category: action.category
+            });
+
+        case 'GET_CATEGORIES':
+            console.log("GET_CATEGORIES " + JSON.stringify(action.data));
+        return { ...state,
+            categories: action.data.categories
+            };
         default:
             return state;
     }

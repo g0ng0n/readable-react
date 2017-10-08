@@ -1,0 +1,39 @@
+{
+  "data": {
+    "categories": [
+      {
+        "name": "react",
+        "path": "react"
+      },
+      {
+        "name": "redux",
+        "path": "redux"
+      },
+      {
+        "name": "udacity",
+        "path": "udacity"
+      }
+    ]
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "config": {
+    "transformRequest": {},
+    "transformResponse": {},
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "foobar"
+    },
+    "baseURL": "http://localhost:3001",
+    "method": "get",
+    "url": "http://localhost:3001/categories"
+  },
+  "request": {}
+}

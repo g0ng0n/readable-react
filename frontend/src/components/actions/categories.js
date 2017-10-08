@@ -1,3 +1,5 @@
+import { fetchCategories } from '../../utils/api'
+
 export const ADD_CATEGORY = 'ADD_RECIPE';
 export const REMOVE_CATEGORY= 'REMOVE_FROM_CALENDAR';
 export const GET_CATEGORY = 'GET_CATEGORY';
@@ -24,9 +26,12 @@ export function getCategory ({ categoryName }){
     }
 }
 
-export function getCategories ({categories }){
-    return {
-        type: GET_CATEGORIES,
-        categories
+export function fetchCategoriesFromServer (categories){
+    return function (dispatch) {
+        fetchCategories()
+            .then((response) => dispatch({
+            type: GET_CATEGORIES,
+            data: response.data
+        }))
     }
 }

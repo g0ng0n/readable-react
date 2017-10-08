@@ -2,12 +2,10 @@ import React from  'react';
 
 const Category = (props) => {
     return(
-        <div className="category">
-            <div className="category-top">
-
+            <div className="">
+                <span className="blue-text text-darken-2">{props.name}</span>
             </div>
-        </div>
     )
-}
+};
 
 export default Category;

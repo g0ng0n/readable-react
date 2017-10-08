@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Category from '../presentational/Post'
+import Posts from './Posts'
+import Categories from './Categories'
 
 class Main extends Component {
 
@@ -8,9 +9,9 @@ class Main extends Component {
     render(){
 
         return(
-            <div className="list-posts">
-
-
+            <div className="row">
+                <Categories />
+                <Posts />
             </div>
         )
     }
